@@ -1,0 +1,11 @@
+<div id="content">
+    <p><strong>Default page</strong></p>
+    <p>Test for flash messages</p>
+    <?php $m = new \Components\Message('Info', 'info'); echo $m->getMessage()?>
+    <?php $m = new \Components\Message('Success', 'success'); echo $m->getMessage()?>
+    <?php $m = new \Components\Message('Warning', 'warning'); echo $m->getMessage()?>
+    <?php $m = new \Components\Message('Error', 'error'); echo $m->getMessage()?>
+    <p>Test for token</p>
+    <code><?=str_replace('>','&gt;', str_replace('<', '&lt;', \Components\Token::getToken()))?></code>
+    <code><?php var_dump($_SESSION['token']) ?></code>
+</div>

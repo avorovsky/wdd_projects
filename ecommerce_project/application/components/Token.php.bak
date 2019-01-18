@@ -1,0 +1,59 @@
+<?php
+
+/*
+ * sets, gets and checks CSRF-token
+ */
+
+namespace Components;
+
+class Token
+{
+
+    private function setToken()
+    {
+        $_SESSION['token'] = md5(time().openssl_random_pseudo_bytes(48));
+    }
+
+    private function checkToken($token)
+    {
+        if ($token != $_SESSION['token']) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public static function getToken()
+    {
+        $string = '<input type="hidden" '.
+                         'name="token" '.
+                         'value="'.$_SESSION['token'].'" />';
+        return $string;
+    }
+
+    public function run()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            // something is posted
+            if (!empty($_POST['token'])) {
+                // token exist
+                if ($this->checkToken($_POST['token'])) {
+                    // token is valid - let's go on with a new one
+                    $this->setToken();
+                    return;
+                }
+            }
+
+            // invalid token - reject POST
+            header('Location: /');
+            die;
+
+        }
+
+        // not a POST - set new token
+        $this->setToken();
+        return;
+
+    }
+
+}

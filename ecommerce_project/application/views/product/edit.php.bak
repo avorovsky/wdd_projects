@@ -1,0 +1,18 @@
+<h1>Product ID <?=$data['id']?></h1>
+<!-- Edit -->
+<?php
+
+    $form = new \Components\Form('/products/save');
+    $form->addField('id', null, 'hidden', $data['id']);
+    $form->addField('seller_id', null, 'hidden', empty($data['seller_id']) ? (empty($_SESSION['user_id']) ? 1 : $_SESSION['user_id']) : $data['seller_id']);
+    $form->addField('sku', 'SKU', null, $data['sku'], 'SKU');
+    $form->addField('name', 'Name', null, $data['name'], 'name');
+    $form->addField('description', 'Description', 'textarea', $data['description'], 'description');
+    $form->addField('price', 'Price', 'number', number_format($data['price'], 2), 'price, $', 'min="0" step="0.01"');
+    $form->addButton('submit', 'Save');
+    $form->addButton('cancel', 'Cancel');
+
+?>
+
+<?=$form->getForm();?>
+<!-- /Edit -->

@@ -1,0 +1,14 @@
+<h1>User ID <?=$data['id']?></h1>
+<!-- Edit -->
+<form method="POST" action="/users/save">
+    <?=\Components\Token::getToken();?>
+    <input type="hidden" name="id" value="<?=$data['id']?>"/><br/>
+    <input type="text" name="username" placeholder="username" value="<?=$data['username']?>"/><br/>
+    <input type="text" name="email" placeholder="email" value="<?=$data['email']?>"/><br/>
+    <input type="password" name="password" placeholder="password" value=""/><br/>
+    <hr>
+    <button type="submit" name="save">Save</button>
+    <button type="submit" name="cancel">Cancel</button>
+    <hr>
+</form>
+<!-- /Edit -->

@@ -1,0 +1,17 @@
+:root {
+    --btn-cancel: #f0ad4e;
+    --btn-ok: #6fb125;
+    --bg-ok: #ddffdd;
+    --btn-filter: #36b2ee;
+    --btn-danger: #ff0000;
+    --bg-danger: #ffdddd;
+    --bg-m-dark: #044c9e;
+    --bg-m-normal: #2760cd;
+    --bg-m-light: #eeeeff;
+    --bg-g-dark: #999999;
+    --bg-g-light: #f8f8f8;
+    --hl-red: #ff7777;
+    --hl-yellow: #fff899;
+    --hl-green: #77ff77;
+    --white: #ffffff;
+}

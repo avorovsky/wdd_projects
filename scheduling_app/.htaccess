@@ -1,0 +1,17 @@
+AddDefaultCharset utf-8
+
+RewriteEngine on
+RewriteBase /
+# do not allow .filename
+RedirectMatch 403 /\..*$
+# give file exists
+RewriteCond %{REQUEST_FILENAME} !-f
+# give dir if exists
+# RewriteCond %{REQUEST_FILENAME} !-d
+# everything else goes to index.php
+# RewriteRule . index.php
+RewriteRule ^(.*)$ public/index.php
+
+# eneable rewrite from console:
+# a2enmod rewrite
+

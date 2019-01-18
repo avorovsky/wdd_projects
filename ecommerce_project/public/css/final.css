@@ -1,0 +1,76 @@
+/* ADDED REQUIRED DURING SLICING */
+a.a-disabled {
+    pointer-events: none;
+    cursor: default;
+}
+#search_suggest {
+    z-index: 9;
+    position: absolute;
+    right: 100px;
+    top: 75px;
+    background-color: #FFF;
+    border-radius: 0 0 5px 5px;
+    width: auto;
+    padding: 0;
+    box-shadow: 0px 10px 20px rgba(100,100,100,.4);
+}
+
+
+}
+#search_suggest ul {
+    padding: 0!important;
+}
+#search_suggest li {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 565px;
+    list-style: none;
+    font-size: 1.2rem;
+    padding: 0 15px;
+    cursor: pointer;
+}
+.hint {
+    font-style: italic;
+    opacity: 0.33;
+}
+.highlight {
+    background-color: #FFF899;
+    border-radius: initial;
+}
+.search_result_item {
+    border: 1px solid #999;
+    margin-bottom: 5px;
+}
+.search_result_link {
+    background-color: #FFF;
+}
+.search_result_tags {
+    font-size: 0.75rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.search_result_data {
+    font-style: italic;
+}
+
+/* Will talk about before presentaition
+#best-seller .owl-item .item .item-inner .item-img .item-img-info a.product-image img {
+    width: 100%;
+    object-fit: contain;
+    height: 287px;
+}
+
+.products-list .product-image img {
+    width: 100%;
+    object-fit: contain;
+    height: 240px;
+}
+
+.products-grid .item .item-inner .item-img .item-img-info a.product-image img{
+  width: 100%;
+  object-fit: contain;
+  height: 287px;
+}
+*/

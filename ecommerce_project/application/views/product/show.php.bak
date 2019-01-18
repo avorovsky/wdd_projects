@@ -1,0 +1,7 @@
+<h1>Product ID <?=$data['id']?></h1>
+<pre>
+<?php var_dump($data) ?>      
+</pre>
+<a href="/products/list">Goto list</a>
+<a href="/products/edit/<?=$data['id']?>">Edit</a>
+<hr>   

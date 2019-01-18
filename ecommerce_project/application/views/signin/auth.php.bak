@@ -1,0 +1,23 @@
+<?php 
+    if (empty($_SESSION['username'])) {
+?>
+
+    <!-- Singin -->
+    <form method="POST" action="/users/signin">
+        <?=\Components\Token::getToken();?>
+        <input type="text" name="username" placeholder="username" value="<?=(empty($_POST['username']) ? '' : $_POST['username'])?>"/>
+        <input type="password" name="password" placeholder="password" />
+        <button type="submit" name="signin">Sign&nbsp;in</button>
+    </form>
+    <!-- /Singin -->
+
+<?php } else { ?>
+
+    <!-- Singout -->
+    <form method="POST" action="/users/signout">
+        <?=\Components\Token::getToken();?>
+        <button type="submit" name="signin"><?=$_SESSION['username']?>&nbsp;|&nbsp;Sign&nbsp;out</button>
+    </form>
+    <!-- /Singout -->
+
+<?php } // endif ?>
