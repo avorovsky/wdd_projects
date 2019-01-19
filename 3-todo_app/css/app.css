@@ -1,0 +1,99 @@
+/*///////////////////////////////////
+// Program:    Web Development 3   //
+// Course:     Intro JavaScript    //
+// Assignment: Final Project       //
+// Instructor: Brent Scott         //
+// Student:    Oleksandr Vorovskyi //
+// Date:       May 20, 2018        //
+// File:       app.css             //
+///////////////////////////////////*/
+
+body{
+  font-family: BenchNine, sans-serif;
+  font-size: 30px;
+  max-width: 100%;
+  min-width: 340px;
+}
+h1{
+  text-align: center;
+  background-color: #999;
+  color: #000;
+  width: 100%;
+  margin: 0;
+  border-radius: 10px;
+  text-shadow:
+    2px 2px rgba(255,255,255,0.5),
+    -2px 2px rgba(255,255,255,0.5),
+    -2px -2px rgba(255,255,255,0.5),
+    2px -2px rgba(255,255,255,0.5);
+}
+img{
+  height: 30px;
+  width: 30px;
+}
+input{
+  font-family: inherit;
+  box-sizing: border-box;
+  height: 3rem;
+  padding: 5px;
+  margin: 0;
+  font-size: 1.75rem;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #000;
+}
+input[type=text]{
+  width: 100%;
+  margin-bottom: 5px;
+}
+input[type=checkbox]{
+  width: 40px;
+  height: 40px;
+}
+table{
+  width: 100%;
+  margin: 5px 0 0 0;
+}
+td{
+  text-align: center;
+  vertical-align: top;
+  padding: 2px;
+}
+.add{
+  padding-top: 7px;
+  vertical-align: middle;
+}
+.task_done, .task_pending{
+  text-align: left;
+}
+.task_done{
+  text-decoration: line-through;
+}
+
+/* Because of pixel ratio, demo-emulation in desktop
+   browser looks different. Actual mobile phone
+   displays the app itself finely */
+@media only screen and (-webkit-min-device-pixel-ratio: 2){
+  body{
+    font-size: 5rem;
+  }
+  img{
+    height: 75px;
+    width: 75px;
+  }
+  input{
+    height: 7rem;
+    font-size: 6rem;
+    font-family: inherit;
+  }
+  input[type=checkbox]{
+    width: 75px;
+    height: 75px;
+  }
+  td{
+    padding: 10px;
+  }
+  .add{
+    padding-top: 25px;
+  }
+}

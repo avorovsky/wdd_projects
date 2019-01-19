@@ -1,0 +1,314 @@
+<!doctype html>
+<!--
+**********************************************
+** Program:     Web Development             **
+** Course:      Capstone HTML5/CSS Project  **
+** Trainer:     Brent Scott                 **
+** Student:     Oleksandr Vorovskyi         **
+** Filename:    index.html                  **
+** Description: Home webpage                **
+**********************************************-->
+<html lang="en">
+  <head>
+    <title>Mobile Blog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#999999" />
+    
+    <!-- favorites and apps icons -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="57x57" href="images/logo57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/logo72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/logo114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/logo144.png" />
+    
+    <!-- embedding Google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700" />
+    
+    <!-- embedding stylesheets -->
+    <link rel="stylesheet" type="text/css" href="styles/desktop.css" media="screen and (min-width:768px)" />
+    <link rel="stylesheet" type="text/css" href="styles/mobile.css" media="screen and (max-width:767px)" />
+    <link rel="stylesheet" type="text/css" href="styles/print.css" media="print" />
+    
+    <!-- conditions for IE9 and earlier support -->
+    <!--[if LTE IE 9]>
+      <script type="text/javascript" src="scripts/lte_ie9.js"></script>
+      <link rel="stylesheet" type="text/css" href="styles/desktop.css" />
+      <style type="text/css">
+        header, nav, main, footer{
+          display: block;
+        }
+      </style>
+    <![endif]-->
+    
+    <!-- style for all IEs to avoid borders on img-links -->
+    <style>
+      a img{
+        border: none;
+        outline: none;
+      }
+    </style>
+    
+    <!-- a little bit of animation required -->
+    <style>
+      /* old Safaries support */
+      @-webkit-keyframes pulse_of_logo{
+        0%{
+          transform: scale(0.25,0.25);
+        }
+        25%{
+          transform: scale(1.3,1.3);
+        }
+        50%{
+          transform: scale(0.75,0.75);
+        }
+        75%{
+          transform: scale(1.25,1.25);
+        }
+        100%{
+          transform: scale(1,1);
+        }
+      }
+      @keyframes pulse_of_logo{
+        0%{
+          transform: scale(0.25,0.25);
+        }
+        25%{
+          transform: scale(1.3,1.3);
+        }
+        50%{
+          transform: scale(0.75,0.75);
+        }
+        75%{
+          transform: scale(1.25,1.25);
+        }
+        100%{
+          transform: scale(1,1);
+        }
+      }
+      #logo img{
+        -webkit-animation: pulse_of_logo ease-in-out forwards 2s;
+        animation: pulse_of_logo ease-in-out forwards 2s;
+      }
+    </style>
+    
+  </head>
+
+  <body>
+    
+    <div id="wrapper">
+      
+      <header>
+        
+        <div id="logo">
+          <h1>Mob</h1>
+          <a href="index.html">
+            <img src="images/logo57.png" alt="Logo" style="width: 57px; height: 57px;" />
+          </a>
+          <h1>Blog</h1>
+          <a href="#menu">
+            <span id="sandwich"></span> <!-- sandwich button -->
+          </a>
+        </div>
+  
+        <nav>
+          <div id="navigation">
+            <!-- main navigation -->
+            <ul class="menu" id="menu">
+              <li class="urhere"><a title="home" href="index.html">Home</a>
+              </li><li><a title="Apps" href="apps.html">Apps</a>
+              </li><li><a title="Devices" href="devices.html">Devices</a>
+              </li><li><a title="How-to's" href="howtos.html">How-To's</a>
+              </li><li><a title="Contacts" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+      </header>
+      
+      <main>
+        
+        <!-- warning message for IE9 and earlier --> 
+        <!--[if LTE IE 9]>
+          <div class="row">
+            <div id="old_ie_warning">
+              <p>Your browser does not support some features of this site. Please, upgrade it!</p>
+            </div>
+          </div>
+        <![endif]-->
+        
+        <div class="row">
+          <!-- banner/"hero" --> 
+          <div id="banner">
+            <h2>Today's Highlight</h2>
+            <p>Get more users for your App by improving accessibility</p>
+            <p class="author">Design Guru</p>
+            <p class="more"><a href="#">Tell me more</a></p>
+          </div> <!-- /#banner -->
+
+        </div> <!-- /#row -->
+        
+        <div class="row">
+          <!-- column left (1) -->
+          <div id="col1" class="column">
+            <table>
+              
+              <tr>
+                <th colspan="2">Top readings</th>
+              </tr>
+              
+              <tr>
+                <td>
+                  <span class="top_no">#1</span>
+                </td>
+                <td>
+                  <span>DIY: Phone's battery replacement</span><br />
+                  <span class="author">Brent Scott</span>
+                </td>
+              </tr>
+              
+              <tr>
+                <td>
+                  <span class="top_no">#2</span>
+                </td>
+                <td>
+                  <span>Top design with Adobe Photoshop</span><br />
+                  <span class="author">Emad Endrawes</span>
+                </td>
+              </tr>
+              
+              <tr>
+                <td>
+                  <span class="top_no">#3</span>
+                </td>
+                <td>
+                  <span>Mobile OCR: how it works?</span><br />
+                  <span class="author">Oleksandr Vorovskyi</span>
+                </td>
+              </tr>
+              
+              <tr>
+                <td>
+                  <span class="top_no">#4</span>
+                </td>
+                <td>
+                  <span>Android vs iOS: The Oscar goes to...!</span><br />
+                  <span class="author">Larry Page</span>
+                </td>
+              </tr>
+              
+              <tr>
+                <td>
+                  <span class="top_no">#5</span>
+                </td>
+                <td>
+                  <span>Who let the dogs out?</span><br />
+                  <span class="author">Baha Men</span>
+                </td>
+              </tr>
+              
+            </table>
+          </div> <!-- /#col1 -->
+          
+          <!-- column middle (2) -->
+          <div id="col2" class="column">
+            <table>
+              
+              <tr>
+                <th colspan="2">Published this week</th>
+              </tr>
+              
+              <tr>
+                <td>
+                  <span class="new_no">Su</span>
+                </td>
+                <td>
+                  <span>Microsoft Office comes to Android tablets</span><br />
+                  <p class="preview">After a three-month preview phase, you can start downloading the final versions of Word, Excel and PowerPoint to Android tablets</p>
+                </td>
+              </tr>
+              
+              <tr>
+                <td>
+                  <span class="new_no">We</span>
+                </td>
+                <td>
+                  <span>Watch movies on your mobile phone</span><br />
+                  <p class="preview">Real Networks is thrilled to announce RealTimes. Here are all about the exciting new product features of RealTimes</p>
+                </td>
+              </tr>
+              
+              <tr>
+                <td>
+                  <span class="new_no">Mo</span>
+                </td>
+                <td>
+                  <span>Valentine's Day 2018: Images and messages for wife or girlfriend</span><br />
+                  <p class="preview">Let your girlfriend or wife know how special she is to you with these messages, images and wishes</p>
+                </td>
+              </tr>
+              
+            </table>
+          </div> <!-- /#col2 -->
+
+
+          <!-- column right (3) -->
+          <div id="col3" class="column">
+            <table>
+              
+              <tr>
+                <th>Advertisement</th>
+              </tr>
+              
+              <tr>
+                <td class="adv">
+                  <a title="Subcribe for newsletters" href="contact.html">
+                    <img src="images/adv_1.gif" alt="Advertisement" />
+                  </a>
+                </td>
+              </tr>
+              
+              <tr>
+                <td class="adv">
+                  <a href="https://www.ebay.com/sch/i.html?_nkw=motorola+tablet">
+                    <img src="images/adv_2.gif" alt="Advertisement" />
+                  </a>
+                </td>
+              </tr>
+              
+            </table>
+          </div> <!-- /#col3 -->
+
+        </div> <!-- /#row -->
+      </main>
+      
+      <footer>
+        <div id="footer">
+          <!-- copyright text and social icons -->
+          <span>
+            <strong>&copy; 2018 John Doe. All rights reserved</strong>
+          </span>
+          <span class="social">
+            <a href="https://www.facebook.com/">
+              <img src="images/ico_facebook.png" alt="Facebook" style="width: 40px; height: 40px" />
+            </a>
+          </span>
+          <span class="social">
+            <a href="https://www.twitter.com/">
+              <img src="images/ico_twitter.png" alt="Twitter" style="width: 40px; height: 40px" />
+            </a>
+          </span>
+          <span class="social">
+            <a href="https://plus.google.com/">
+              <img src="images/ico_googleplus.png" alt="Google+" style="width: 40px; height: 40px" />
+            </a>
+          </span>
+        </div> <!-- /#footer -->
+      </footer>
+      
+    </div> <!-- /#wrapper -->
+  
+  </body>
+</html>

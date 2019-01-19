@@ -1,0 +1,229 @@
+<!doctype html>
+<!--
+**********************************************
+** Program:     Web Development             **
+** Course:      Capstone HTML5/CSS Project  **
+** Trainer:     Brent Scott                 **
+** Student:     Oleksandr Vorovskyi         **
+** Filename:    devices.html                **
+** Description: Devices webpage             **
+**********************************************-->
+<html lang="en">
+  <head>
+    <title>Mobile Blog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#999999" />
+    
+    <!-- favorites and apps icons -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="57x57" href="images/logo57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/logo72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/logo114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/logo144.png" />
+    
+    <!-- embedding Google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700" />
+    
+    <!-- embedding stylesheets -->
+    <link rel="stylesheet" type="text/css" href="styles/desktop.css" media="screen and (min-width:768px)" />
+    <link rel="stylesheet" type="text/css" href="styles/mobile.css" media="screen and (max-width:767px)" />
+    <link rel="stylesheet" type="text/css" href="styles/print.css" media="print" />
+    
+    <!-- conditions for IE9 and earlier support -->
+    <!--[if LTE IE 9]>
+      <script type="text/javascript" src="scripts/lte_ie9.js"></script>
+      <link rel="stylesheet" type="text/css" href="styles/desktop.css" />
+      <style type="text/css">
+        header, nav, main, footer{
+          display: block;
+        }
+      </style>
+    <![endif]-->
+    
+    <!-- style for all IEs to avoid borders on img-links -->
+    <style>
+      a img{
+        border: none;
+        outline: none;
+      }
+    </style>
+    
+    <!-- articles style -->
+    <style>
+      #banner{
+        min-height: 50px;
+        width: 100%;
+      }
+      .row{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+      }
+    </style>
+    
+  </head>
+
+  <body>
+    
+    <div id="wrapper">
+      
+      <header>
+        
+        <div id="logo">
+          <h1>Mob</h1>
+          <a href="index.html">
+            <img src="images/logo57.png" alt="Logo" style="width: 57px; height: 57px;" />
+          </a>
+          <h1>Blog</h1>
+          <a href="#menu">
+            <span id="sandwich"></span> <!-- sandwich button -->
+          </a>
+        </div>
+  
+        <nav>
+          <div id="navigation">
+            <!-- main navigation -->
+            <ul class="menu" id="menu">
+              <li><a title="home" href="index.html">Home</a>
+              </li><li><a title="Apps" href="apps.html">Apps</a>
+              </li><li class="urhere"><a title="Devices" href="devices.html">Devices</a>
+              </li><li><a title="How-to's" href="howtos.html">How-To's</a>
+              </li><li><a title="Contacts" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+      </header>
+      
+      <main>
+        
+        <!-- warning message for IE9 and earlier --> 
+        <!--[if LTE IE 9]>
+          <div class="row">
+            <div id="old_ie_warning">
+              <p>Your browser does not support some features of this site. Please, upgrade it!</p>
+            </div>
+          </div>
+        <![endif]-->
+        
+        <div class="row">
+          <!-- banner/"hero" --> 
+          <div id="banner">
+            <h2>Gadgets we love</h2>
+          </div> <!-- /#banner -->
+
+        </div> <!-- /#row -->
+        
+        <!-- article 1 -->
+        <div class="row">
+          <!-- column left (1) -->
+          <div class="article_photo">
+            <img src="images/dev_iphonex_pixel2.jpg" alt="Article picture" />
+          </div> <!-- /#col1 -->
+          
+          <!-- column right (2) -->
+          <div class="article_text">
+            <h3>Google Pixel 2 XL vs iPhone X: Which phone is better?</h3>
+            <p class="preview">Google Pixel 2 vs iPhone X: We weigh up Google’s Android flagship against Apple’s latest – and most expensive – iPhone to date.</p>
+            <p class="author">Sean Keach</p>
+            <p class="more"><a href="#">Tell me more</a></p>
+          </div> <!-- /#col2 -->
+        </div> <!-- /#row -->
+
+        <!-- article 2 -->
+        <div class="row">
+          <!-- column left (1) -->
+          <div class="article_photo">
+            <img src="images/dev_lgv30.jpg" alt="Article picture" />
+          </div> <!-- /#col1 -->
+          
+          <!-- column right (2) -->
+          <div class="article_text">
+            <h3>LG V30</h3>
+            <p class="preview">The V30 is LG’s latest flagship device and it offers a whole load of features that wouldn’t find anywhere else. It’s a great phone, but one that appears to have lost some of its lustre as a result of the delayed release.</p>
+            <p class="author">Max Parker</p>
+            <p class="more"><a href="#">Tell me more</a></p>
+          </div> <!-- /#col2 -->
+        </div> <!-- /#row -->
+
+        <!-- article 3 -->
+        <div class="row">
+          <!-- column left (1) -->
+          <div class="article_photo">
+            <img src="images/dev_pixelbook.jpg" alt="Article picture" />
+          </div> <!-- /#col1 -->
+          
+          <!-- column right (2) -->
+          <div class="article_text">
+            <h3>Can a Chromebook replace a laptop in a photographer’s workflow?</h3>
+            <p class="preview">Historically, Chromebooks haven’t really targeted serious power users, but the $900 Google Pixelbook looked like it could change that perception when it came out last year. Beyond its high-class exterior, the Pixelbook can even be optioned with an Intel Core i7 processor (albeit, the mobile version) and 16GB of RAM. Clearly, this is meant for powering more than an operating system that started its life as little more than a glorified web browser.</p>
+            <p class="author">Daven Mathies</p>
+            <p class="more"><a href="#">Tell me more</a></p>
+          </div> <!-- /#col2 -->
+        </div> <!-- /#row -->
+
+        <!-- article 4 -->
+        <div class="row">
+          <!-- column left (1) -->
+          <div class="article_photo">
+            <img src="images/dev_htcdream.jpeg" alt="Article picture" />
+          </div> <!-- /#col1 -->
+          
+          <!-- column right (2) -->
+          <div class="article_text">
+            <h3>HTC Dream</h3>
+            <p class="preview">The HTC Dream (also known as the T-Mobile G1 in the United States of America and parts of Europe, and as the Era G1 in Poland) is a smartphone developed by HTC. First released in September 2008, the Dream was the first commercially released device to use the Linux-based Android operating system</p>
+            <p class="author">Wikipedia</p>
+            <p class="more"><a href="#">Tell me more</a></p>
+          </div> <!-- /#col2 -->
+        </div> <!-- /#row -->
+
+        <!-- article 5 -->
+        <div class="row">
+          <!-- column left (1) -->
+          <div class="article_photo">
+            <img src="images/dev_nokia8110.jpg" alt="Article picture" />
+          </div> <!-- /#col1 -->
+          
+          <!-- column right (2) -->
+          <div class="article_text">
+            <h3>Nokia’s banana phone from The Matrix is back</h3>
+            <p class="preview">Back in 1999, Keanu Reeves was famous for playing Neo in The Matrix, and not for looking sad on a bench. Nokia was also the “world’s leading mobile phone supplier” back then, and it used this popularity to feature its Nokia 8110 “banana phone” in The Matrix film.</p>
+            <p class="author">Tom Warren</p>
+            <p class="more"><a href="#">Tell me more</a></p>
+          </div> <!-- /#col2 -->
+        </div> <!-- /#row -->
+
+      </main>
+      
+      <footer>
+        <div id="footer">
+          <!-- copyright text and social icons -->
+          <span>
+            <strong>&copy; 2018 John Doe. All rights reserved</strong>
+          </span>
+          <span class="social">
+            <a href="https://www.facebook.com/">
+              <img src="images/ico_facebook.png" alt="Facebook" style="width: 40px; height: 40px" />
+            </a>
+          </span>
+          <span class="social">
+            <a href="https://www.twitter.com/">
+              <img src="images/ico_twitter.png" alt="Twitter" style="width: 40px; height: 40px" />
+            </a>
+          </span>
+          <span class="social">
+            <a href="https://plus.google.com/">
+              <img src="images/ico_googleplus.png" alt="Google+" style="width: 40px; height: 40px" />
+            </a>
+          </span>
+        </div> <!-- /#footer -->
+      </footer>
+      
+    </div> <!-- /#wrapper -->
+  
+  </body>
+</html>

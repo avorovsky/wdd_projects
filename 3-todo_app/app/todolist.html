@@ -1,0 +1,157 @@
+<!doctype html>
+<!--
+/////////////////////////////////////
+// Program:    Web Development 3   //
+// Course:     Intro JavaScript    //
+// Assignment: Final Project       //
+// Instructor: Brent Scott         //
+// Student:    Oleksandr Vorovskyi //
+// Date:       May 20, 2018        //
+// File:       todolist.html       //
+/////////////////////////////////////
+-->
+<html lang="en">
+  <head>
+    <title>My ToDo List</title>
+    <meta charset="utf-8" />
+    <!-- Android theme -->
+    <meta name="theme-color" content="#cccccc" />
+    <link rel="icon" sizes="192x192" href="../img/todo.png" />
+    <!-- Favourites icon -->
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
+    <!-- Embedding Google-font, this time the most condensed one -->
+    <link href="https://fonts.googleapis.com/css?family=BenchNine:400,700" rel="stylesheet">
+    <!-- Embedding stylesheet -->
+    <link rel="stylesheet" type="text/css" href="../css/app.css" media="screen" />
+  </head>
+
+  <body>
+    <h1>My ToDo List</h1>
+    
+    <!-- new task block -->
+    <table>
+      <tr>
+        <td><input id="task_name" type="text" placeholder="Task name..." /></td>
+        <td class="add"><a href="#" onclick="taskAdd(); return false;"><img src="../img/add.png" alt="add" title="Add" /></a></td>
+      </tr>
+    </table>
+    <hr />
+    <!-- container for JavaScript output -->
+    <div id="task_list_view"></div>
+
+    <script>
+      // array of tasks, format: {task_name: ... , task_done: ...}
+      var todo_list = [];
+      // trying to read athe list from localStorage
+      if(localStorage.getItem('my_local_todo_list')){
+        todo_list = JSON.parse(localStorage.getItem('my_local_todo_list'));
+      } else {
+        // create demo content if nothing is found
+        tasksDemo();
+      }
+      // display the list
+      tasksOutput();
+      
+      // demo content
+      function tasksDemo(){
+        todo_list[todo_list.length] = ({task_name: 'Do \'JavaScript Intro\' course', task_done: true});
+        todo_list[todo_list.length] = ({task_name: 'Submit Final Project', task_done: true});
+        todo_list[todo_list.length] = ({task_name: 'Go for a supper', task_done: false});
+        todo_list[todo_list.length] = ({task_name: 'Get some sleep', task_done: false});
+        todo_list[todo_list.length] = ({task_name: 'Check the schedule what\'s upcoming', task_done: false});
+      }
+      
+      // show the list on the page
+      function tasksOutput() {
+        var tasks_output = '';
+        tasks_output += '<table>';
+        for (var i in todo_list){
+          tasks_output += '<tr>';
+          // done button + its state
+          tasks_output += '<td><input type="checkbox" onclick="stateChange(' + i + ');" ';
+          if(todo_list[i].task_done == true){
+            tasks_output += ' checked />';
+            var task_class = "task_done";
+          } else {
+            tasks_output += ' />';
+            var task_class = "task_pending";
+          }
+          tasks_output += '</td>';
+          // name of task
+          tasks_output += '<td class="' + task_class + '">' + todo_list[i].task_name + '</td>';
+          // button "Up"
+          tasks_output += '<td>';
+          if(i != 0){
+            tasks_output += '<a href="#" onclick="taskMove(' + (parseInt(i) - 1) + ',' + i + '); return false;"><img src="../img/up.png" alt="up" title="Up" /></a>';
+          }
+          tasks_output += '</td>';
+          // button "Down"
+          tasks_output += '<td>';
+          if(i != todo_list.length - 1){
+            tasks_output += '<a href="#" onclick="taskMove(' + (parseInt(i) + 1) + ',' + i + '); return false;"><img src="../img/down.png" alt="down" title="Down" /></a>';
+          }
+          // button "Del"
+          tasks_output += '<td><a href="#" onclick="taskDel(' + i + '); return false;"><img src="../img/del.png" alt="del" title="Del" /></a></td>';
+          tasks_output += '</tr>';
+        }
+        tasks_output += '</table>';
+        document.getElementById('task_list_view').innerHTML = tasks_output;
+        // save the list in localStorage (array to JSON string)
+        localStorage.setItem('my_local_todo_list', JSON.stringify(todo_list));
+      }
+
+      // adding task to the list
+      function taskAdd(){
+        // getting input field value
+        var input_value = document.getElementById('task_name').value;
+        // temporary element
+        var task_temp = {};
+        task_temp.task_name = input_value;
+        task_temp.task_done = false;
+        // adding new task at the end of list
+        todo_list[todo_list.length] = task_temp;
+        // refresh the output
+        tasksOutput();
+      }
+
+      // moving tasks in the list (manual sort)
+      function taskMove(new_position,cur_position){
+        // temporary element from that one at new position
+        var task_temp = {};
+        task_temp.task_name = todo_list[new_position].task_name;
+        task_temp.task_done = todo_list[new_position].task_done;
+        // change element at new position with current one
+        todo_list[new_position].task_name = todo_list[cur_position].task_name;
+        todo_list[new_position].task_done = todo_list[cur_position].task_done;
+        // change element at current position with temporary one
+        todo_list[cur_position].task_name = task_temp.task_name;
+        todo_list[cur_position].task_done = task_temp.task_done;
+        // refresh the output
+        tasksOutput();
+      }
+
+      // delete task from the list
+      function taskDel(position){
+        todo_list.splice(position,1);
+        // refresh the output
+        tasksOutput();
+      }
+
+      // saving task's state change
+      function stateChange(position){
+        if(todo_list[position].task_done == false){
+          todo_list[position].task_done = true;
+        } else {
+          todo_list[position].task_done = false;
+        }
+        // refresh the output
+        tasksOutput();
+      }
+    </script>
+
+    <noscript>
+      This page requires JavaScript, please enable it in your browser
+    </noscript>
+
+  </body>
+</html>

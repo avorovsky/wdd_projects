@@ -1,0 +1,126 @@
+/*///////////////////////////////////////
+// Program:    Web Development 3       //
+// Course:     Advanced JavaScript     //
+// Assignment: #3                      //
+// Instructor: Brent Scott             //
+// Student:    Oleksandr Vorovskyi     //
+// Date:       June 17, 2018           //
+// File:       main.css                //
+///////////////////////////////////////*/
+
+body{
+  font-family: Roboto, Calibri, Tahoma, sans-serif;
+  font-size: 16px;
+  background-color: #F4F4F8;
+}
+.warning{
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: #F00;
+  padding: 5px;
+}
+#container{
+  position: relative;
+  max-width: 960px;
+  min-width: 610px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  margin: 0;
+  border-radius: 15px;
+  background-color: #E6E6EA;
+  margin-top: 5px;
+}
+h1{
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 2.5rem;
+  background-color: #E6E6EA;
+  padding: 10px;
+  margin: -10px -10px 5px -10px;
+  text-shadow:
+    2px 2px rgba(255,255,255,0.75),
+    -2px 2px rgba(255,255,255,0.75),
+    -2px -2px rgba(255,255,255,0.75),
+    2px -2px rgba(255,255,255,0.75);
+}
+.items{
+  display: none;
+}
+#game{
+  min-width: 415px;
+  box-sizing: border-box;
+  float: left;
+  padding: 2px;
+}
+#sidebar{
+  height: 400px;
+  box-sizing: border-box;
+  float: left;
+}
+#todrop, #solution{
+  height: 170px;
+  width: 170px;
+  box-sizing: border-box;
+  border: 2px solid #999;
+  text-align: center;
+  padding: 2px;
+  margin-bottom: 2px;
+  border-radius: 10px;
+}
+#todrop{
+  color: #009FB7;
+  font-weight: bolder;
+  line-height: 1.5rem;
+}
+#solution img{
+  border-radius: 10px;
+}
+#reset{
+  box-sizing: border-box;
+  text-align: center;
+  padding: 7px;
+  border-radius: 10px;
+}
+#instructions, #results{
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+  margin: 2px auto;
+  background-color: #CCC;
+  font-size: 1.25rem;
+}
+button{
+  width: 155px;
+  font-family: inherit;
+  font-size: 1.25rem;
+  background-color: #009FB7;
+  color: #FFF;
+  border-radius: 8px;
+  padding: 7px 25px;
+}
+input{
+  font-family: inherit;
+  font-size: 1.25rem;
+  border-radius: 7px;
+  padding: 3px 5px;
+  margin-left: 5px;
+}
+#results table{
+  width: 100%;
+  border-spacing: 5px;
+}
+td{
+  background-color: #F4F4F8;
+  padding: 5px;
+  border-radius: 5px;
+}

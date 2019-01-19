@@ -1,0 +1,315 @@
+<!doctype html>
+<!--
+**********************************************
+** Program:     Web Development             **
+** Course:      Capstone HTML5/CSS Project  **
+** Trainer:     Brent Scott                 **
+** Student:     Oleksandr Vorovskyi         **
+** Filename:    contact.html                **
+** Description: Feedback form webpage       **
+**********************************************-->
+<html lang="en">
+  <head>
+    <title>Mobile Blog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#999999" />
+    
+    <!-- favorites and apps icons -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="57x57" href="images/logo57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/logo72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/logo114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/logo144.png" />
+    
+    <!-- embedding Google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700" />
+    
+    <!-- embedding stylesheets -->
+    <link rel="stylesheet" type="text/css" href="styles/desktop.css" media="screen and (min-width:768px)" />
+    <link rel="stylesheet" type="text/css" href="styles/mobile.css" media="screen and (max-width:767px)" />
+    <link rel="stylesheet" type="text/css" href="styles/print.css" media="print" />
+    
+    <!-- conditions for IE9 and earlier support -->
+    <!--[if LTE IE 9]>
+      <script type="text/javascript" src="scripts/lte_ie9.js"></script>
+      <link rel="stylesheet" type="text/css" href="styles/desktop.css" />
+      <style type="text/css">
+        header, nav, main, footer{
+          display: block;
+        }
+      </style>
+    <![endif]-->
+    
+    <!-- style for all IEs to avoid borders on img-links -->
+    <style>
+      a img{
+        border: none;
+        outline: none;
+      }
+    </style>
+    
+    <!-- slyle for contacts and feedback form -->
+    <style>
+      /* contact info */
+      #contacts{
+        padding: 0;
+      }
+      #contacts td{
+        width: 50%;
+        border-collapse: collapse;
+        border-style: hidden;
+        vertical-align: top;
+      }
+      #contact_map{
+        width: 100%;
+        padding: 15px;
+      }
+      #contact_map img{
+        width: 100%;
+        max-width: 385px;
+        border: 2px solid #999999;
+        border-radius: 5px;
+      }
+      #contact_map img:hover{
+        -webkit-transform: scale(1.05,1.05);
+        -moz-transform: scale(1.05,1.05);
+        -ms-transform: scale(1.05,1.05);
+        -o-transform: scale(1.05,1.05);
+        transform: scale(1.05,1.05);
+      }
+      @media screen and (max-width: 575px){
+        #banner p:not(.author){
+          font-size: 1rem;
+        }
+      }      
+      
+      /* feedback form */
+      #feedback{
+        background-color: rgba(255,255,255,0.75);
+        padding: 5px;
+      }
+      input, select, textarea{
+        box-sizing: border-box;
+        height: 2.5rem;
+        padding: 5px;
+        margin: 5px 0;
+        font-size: 1.25rem;
+        width: 275px;
+        background-color: #cccccc;
+        border-radius: 5px;
+        color: #000000;
+        font-family: inherit;
+      }
+      input[type=file]{
+        width: 100%;
+        background-color: rgba(0,0,0,0);
+      }
+      input[type=reset], input[type=submit]{
+        display: inline-block;
+        width: 150px;
+        margin: 10px auto;
+      }
+      textarea{
+        width: 100%;
+        max-width: none;
+        resize: vertical;
+        min-height: 10rem;
+      }
+      label{
+        display: inline-block;
+        min-width: 100px;
+        height: 1.75rem;
+        margin-right: 10px;
+        font-size: 1.25rem;
+      }
+      .required{
+        color: #ff0000;
+        margin: 0 10px 0 -10px;
+        font-size: 1.5rem;
+      }
+      .not_required{
+        opacity: 0;
+        font-size: 1.5rem;
+      }
+      fieldset{
+        border-radius: 5px;
+        font-size: 1.25rem;
+      }
+      legend{
+        padding: 5px 15px;
+      }
+      #buttons{
+        text-align: center;
+      }
+    </style>
+    
+  </head>
+
+  <body>
+    
+    <div id="wrapper">
+      
+      <header>
+        
+        <div id="logo">
+          <h1>Mob</h1>
+          <a href="index.html">
+            <img src="images/logo57.png" alt="Logo" style="width: 57px; height: 57px;" />
+          </a>
+          <h1>Blog</h1>
+          <a href="#menu">
+            <span id="sandwich"></span> <!-- sandwich button -->
+          </a>
+        </div>
+  
+        <nav>
+          <div id="navigation">
+            <!-- main navigation -->
+            <ul class="menu" id="menu">
+              <li><a title="home" href="index.html">Home</a>
+              </li><li><a title="Apps" href="apps.html">Apps</a>
+              </li><li><a title="Devices" href="devices.html">Devices</a>
+              </li><li><a title="How-to's" href="howtos.html">How-To's</a>
+              </li><li class="urhere"><a title="Contacts" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+      </header>
+      
+      <main>
+        
+        <!-- warning message for IE9 and earlier --> 
+        <!--[if LTE IE 9]>
+          <div class="row">
+            <div id="old_ie_warning">
+              <p>Your browser does not support some features of this site. Please, upgrade it!</p>
+            </div>
+          </div>
+        <![endif]-->
+        
+        <div class="row">
+          <!-- banner/"hero" --> 
+          <div id="banner">
+            <!-- contact info -->
+            <h2>Contact information</h2>
+            <table id="contacts">
+              <tr>
+                <td id="contact_info">
+                  <p>460 Portage Ave<br />Winnipeg<br />MB R3C0E8<br />Canada</p>
+                  <p>Phone:&nbsp;<a href="tel:+12049826633">(204)&nbsp;982&nbsp;6633</a><br />Fax:&nbsp;(204)&nbsp;944&nbsp;0115</p>
+                </td>
+                <td id="contact_map">
+                  <a href="https://maps.google.com/maps?q=460%20Portage%20Ave%20Winnipeg%2C%20MB%20R3C%200E8">
+                    <img src="images/map.png" alt="Map" title="View on Google Maps"/>
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </div> <!-- /#banner -->
+          
+          <div id="map">
+          </div>
+
+        </div> <!-- /#row -->
+        
+        <div class="row">
+          <div id="feedback">
+            <form method="post"
+                  action="http://www.scott-media.com/test/form_display.php"
+                  id="feedback_form"
+                  name="feedback_form"
+                  autocomplete="on">
+
+              <fieldset>
+                <legend>Contact us</legend>
+                <p>
+                  <label for="preffered_name">Your name</label>
+                  <span class="required">*</span>
+                  <input type="text"
+                         id="preffered_name"
+                         name="preffered_name"
+                         required="required" 
+                         placeholder="Preferred name" />
+                </p>
+                <p>
+                  <label for="subject">Subject</label>
+                  <span class="not_required">*</span>
+                  <select name="subject" id="subject">
+                    <option value="site_feedback" selected>Site feedback</option>
+                    <option value="news_suscribe">News subscription</option>
+                    <option value="article_submit">Article submission</option>
+                    <option value="info_request">Request for information</option>
+                    <option value="other_reason">Other reason</option>
+                  </select>
+                </p>
+                <p>
+                  <label for="email_address">Your email</label>
+                  <span class="required">*</span>
+                  <input type="email"
+                         id="email_address"
+                         name="email_address"
+                         required="required" 
+                         placeholder="Actual email" />
+                </p>
+                <p>
+                  <label class="addinfo" for="comments"><span>Your message</span></label><br />
+                  <textarea name="comments"
+                            id="comments"
+                            placeholder="Let us know your comments"></textarea>
+                </p>
+                
+                <fieldset>
+                  <legend>Attachment</legend>
+                  <input type="file"
+                         id="file_to_submit"
+                         name="file_to_submit" />
+                </fieldset>
+                
+              </fieldset>
+
+              <div id="buttons">
+                <input id="button_send"
+                       type="submit" 
+                       value="Send message" />
+                <input id="button_clear"
+                       type="reset" 
+                       value="Clear form" /> 
+              </div><!-- buttons -->
+
+            </form>
+          </div> <!-- /#feedback -->
+        </div> <!-- /#row -->
+      </main>
+      
+      <footer>
+        <div id="footer">
+          <!-- copyright text and social icons -->
+          <span>
+            <strong>&copy; 2018 John Doe. All rights reserved</strong>
+          </span>
+          <span class="social">
+            <a href="https://www.facebook.com/">
+              <img src="images/ico_facebook.png" alt="Facebook" style="width: 40px; height: 40px" />
+            </a>
+          </span>
+          <span class="social">
+            <a href="https://www.twitter.com/">
+              <img src="images/ico_twitter.png" alt="Twitter" style="width: 40px; height: 40px" />
+            </a>
+          </span>
+          <span class="social">
+            <a href="https://plus.google.com/">
+              <img src="images/ico_googleplus.png" alt="Google+" style="width: 40px; height: 40px" />
+            </a>
+          </span>
+        </div> <!-- /#footer -->
+      </footer>
+      
+    </div> <!-- /#wrapper -->
+  
+  </body>
+</html>

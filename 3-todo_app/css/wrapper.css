@@ -1,0 +1,56 @@
+/*///////////////////////////////////
+// Program:    Web Development 3   //
+// Course:     Intro JavaScript    //
+// Assignment: Final Project       //
+// Instructor: Brent Scott         //
+// Student:    Oleksandr Vorovskyi //
+// Date:       May 20, 2018        //
+// File:       wrapper.css         //
+///////////////////////////////////*/
+
+html{
+  background-color: #ccc;
+}
+#container{
+  background: url(../img/phone.png);
+  /* size = background image size */
+  width: 421px;
+  height: 852px;
+  /* horizontal centering */
+  position: absolute;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+#content{
+  /* to match the screen of phone */
+  position: relative;
+  top: 91px;
+  left: 30px;
+  width: 357px;
+  height: 636px;
+  border-radius: 6px;
+}
+#the_app{
+  /* fill the div */
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+}
+#vulcan{
+  position: relative;
+  top: 119px;
+  left: 177px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: url(../img/vulcan_salute.png);
+  background-size: contain;
+  opacity: 0;
+  -webkit-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
+}
+#vulcan:hover{
+  opacity: 1;
+}

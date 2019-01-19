@@ -1,0 +1,85 @@
+<!doctype html>
+<!--
+/////////////////////////////////////////
+// Program:    Web Development 3       //
+// Course:     Advanced JavaScript     //
+// Assignment: #3                      //
+// Instructor: Brent Scott             //
+// Student:    Oleksandr Vorovskyi     //
+// Date:       June 17, 2018           //
+// File:       index.html              //
+/////////////////////////////////////////
+-->
+<html lang="en">
+  <head>
+    <title>Maze Game</title>
+    <meta charset="utf-8" />
+    <!-- favourites icon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- embedding Google-font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+    <!-- embedding styles -->
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <script>document.write('\<\!-- ');</script>
+    <link rel="stylesheet" href="css/nonjs.css" type="text/css" />
+    <!-- above will be commented if JS enabled -->
+    <!-- loading scripts -->
+    <script src="scr/themaze.js"></script>
+    <script src="scr/dragdrop.js"></script>
+    <script src="scr/lstorage.js"></script>
+  </head>
+
+  <body>
+      <h1>Maze Game</h1>
+    <div id="container">
+      
+      
+      <div id="game">
+        <canvas id="maze">
+          <span class="warning">Please use modern browser to play the game</span>
+        </canvas>
+      </div> <!-- /game -->
+      
+      <div id="sidebar">
+       
+        <div id="todrop"
+             ondrop="dropIt(event)"
+             ondragover="allowDrop(event)">
+        </div> <!-- /todrop -->
+        
+        <div id="solution">
+          <img id="sol_img"
+               draggable="true"
+               ondragstart="dragIt(event)"
+               alt="solution" />
+        </div> <!-- /solution -->
+        
+        <div id="reset">
+          <button id="reset_btn" onclick="newGameInit();">New game</button>
+        </div> <!-- /solution -->
+        
+      </div> <!-- /sidebar -->
+      
+      <div id="instructions">
+        <strong>Instructions:</strong>
+        Let monkey get to the banana. 
+        Use arrow keys to change the direction. 
+        Other keys are to stop it.
+      </div> <!-- /instructions -->
+      
+      <div id="results">
+      </div> <!-- /results -->
+      
+      <!-- in-game items -->
+      <img id="monkey" class="items" src="img/monkey.png" alt="monkey" />
+      <img id="banana" class="items" src="img/banana.png" alt="banana" />
+      <img id="solved" class="items" src="img/solved.png" alt="solved" />
+    
+      <noscript>
+        <span class="warning">This page requires JavaScript, please enable it in your browser</span>
+      </noscript>
+    
+    </div> <!-- /container -->
+  </body>
+</html>

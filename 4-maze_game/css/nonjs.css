@@ -1,0 +1,13 @@
+/*///////////////////////////////////////
+// Program:    Web Development 3       //
+// Course:     Advanced JavaScript     //
+// Assignment: #3                      //
+// Instructor: Brent Scott             //
+// Student:    Oleksandr Vorovskyi     //
+// Date:       June 17, 2018           //
+// File:       nonjs.css               //
+///////////////////////////////////////*/
+
+#sidebar, #instructions, #results{
+  display: none;
+}

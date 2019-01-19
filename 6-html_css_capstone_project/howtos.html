@@ -1,0 +1,229 @@
+<!doctype html>
+<!--
+**********************************************
+** Program:     Web Development             **
+** Course:      Capstone HTML5/CSS Project  **
+** Trainer:     Brent Scott                 **
+** Student:     Oleksandr Vorovskyi         **
+** Filename:    howtos.html                 **
+** Description: How-to's webpage            **
+**********************************************-->
+<html lang="en">
+  <head>
+    <title>Mobile Blog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#999999" />
+    
+    <!-- favorites and apps icons -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="57x57" href="images/logo57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/logo72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/logo114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/logo144.png" />
+    
+    <!-- embedding Google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700" />
+    
+    <!-- embedding stylesheets -->
+    <link rel="stylesheet" type="text/css" href="styles/desktop.css" media="screen and (min-width:768px)" />
+    <link rel="stylesheet" type="text/css" href="styles/mobile.css" media="screen and (max-width:767px)" />
+    <link rel="stylesheet" type="text/css" href="styles/print.css" media="print" />
+    
+    <!-- conditions for IE9 and earlier support -->
+    <!--[if LTE IE 9]>
+      <script type="text/javascript" src="scripts/lte_ie9.js"></script>
+      <link rel="stylesheet" type="text/css" href="styles/desktop.css" />
+      <style type="text/css">
+        header, nav, main, footer{
+          display: block;
+        }
+      </style>
+    <![endif]-->
+    
+    <!-- style for all IEs to avoid borders on img-links -->
+    <style>
+      a img{
+        border: none;
+        outline: none;
+      }
+    </style>
+    
+    <!-- articles style -->
+    <style>
+      #banner{
+        min-height: 50px;
+        width: 100%;
+      }
+      .row{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+      }
+    </style>
+    
+  </head>
+
+  <body>
+    
+    <div id="wrapper">
+      
+      <header>
+        
+        <div id="logo">
+          <h1>Mob</h1>
+          <a href="index.html">
+            <img src="images/logo57.png" alt="Logo" style="width: 57px; height: 57px;" />
+          </a>
+          <h1>Blog</h1>
+          <a href="#menu">
+            <span id="sandwich"></span> <!-- sandwich button -->
+          </a>
+        </div>
+  
+        <nav>
+          <div id="navigation">
+            <!-- main navigation -->
+            <ul class="menu" id="menu">
+              <li><a title="home" href="index.html">Home</a>
+              </li><li><a title="Apps" href="apps.html">Apps</a>
+              </li><li><a title="Devices" href="devices.html">Devices</a>
+              </li><li class="urhere"><a title="How-to's" href="howtos.html">How-To's</a>
+              </li><li><a title="Contacts" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+      </header>
+      
+      <main>
+        
+        <!-- warning message for IE9 and earlier --> 
+        <!--[if LTE IE 9]>
+          <div class="row">
+            <div id="old_ie_warning">
+              <p>Your browser does not support some features of this site. Please, upgrade it!</p>
+            </div>
+          </div>
+        <![endif]-->
+        
+        <div class="row">
+          <!-- banner/"hero" --> 
+          <div id="banner">
+            <h2>How to do it? We know all the answers</h2>
+          </div> <!-- /#banner -->
+
+        </div> <!-- /#row -->
+        
+        <!-- article 1 -->
+        <div class="row">
+          <!-- column left (1) -->
+          <div class="article_photo">
+            <img src="images/ht_night_photo.jpeg" alt="Article picture" />
+          </div> <!-- /#col1 -->
+          
+          <!-- column right (2) -->
+          <div class="article_text">
+            <h3>Photo of sunset... It's easy!</h3>
+            <p class="preview">No good travel photo album is complete without the token sunrise or sunset picture! Many travelers seem to live by this mantra – however most sunset and sunrise photographs that I see are quite disappointing.</p>
+            <p class="author">Darren Rowse</p>
+            <p class="more"><a href="#">Tell me more</a></p>
+          </div> <!-- /#col2 -->
+        </div> <!-- /#row -->
+
+        <!-- article 2 -->
+        <div class="row">
+          <!-- column left (1) -->
+          <div class="article_photo">
+            <img src="images/ht_smartwatch.jpeg" alt="Article picture" />
+          </div> <!-- /#col1 -->
+          
+          <!-- column right (2) -->
+          <div class="article_text">
+            <h3>Your smartwatch can do more</h3>
+            <p class="preview">So there is a treasure trove of Apple Watch reviews making the rounds right about now. While reading them, you can’t get away from the idea that quite a few are still unconvinced that the smartwatch is worth investing in.</p>
+            <p class="author">Singyin Lee</p>
+            <p class="more"><a href="#">Tell me more</a></p>
+          </div> <!-- /#col2 -->
+        </div> <!-- /#row -->
+
+        <!-- article 3 -->
+        <div class="row">
+          <!-- column left (1) -->
+          <div class="article_photo">
+            <img src="images/ht_type_fast.jpeg" alt="Article picture" />
+          </div> <!-- /#col1 -->
+          
+          <!-- column right (2) -->
+          <div class="article_text">
+            <h3>High-speed typing hints</h3>
+            <p class="preview">Living on the digital edge where typing is almost an everyday necessity, learning the ways of proper keyboard usage are crucial.</p>
+            <p class="author">Brian Voo</p>
+            <p class="more"><a href="#">Tell me more</a></p>
+          </div> <!-- /#col2 -->
+        </div> <!-- /#row -->
+
+        <!-- article 4 -->
+        <div class="row">
+          <!-- column left (1) -->
+          <div class="article_photo">
+            <img src="images/ht_photo_shooting.jpeg" alt="Article picture" />
+          </div> <!-- /#col1 -->
+          
+          <!-- column right (2) -->
+          <div class="article_text">
+            <h3>Oh, no! I forgot my tripod...</h3>
+            <p class="preview">A tripod is my most valuable photo accessory. Sometimes you get caught without it unexpectedly, and sometimes they even break.</p>
+            <p class="author">Anne McKinnell</p>
+            <p class="more"><a href="#">Tell me more</a></p>
+          </div> <!-- /#col2 -->
+        </div> <!-- /#row -->
+
+        <!-- article 5 -->
+        <div class="row">
+          <!-- column left (1) -->
+          <div class="article_photo">
+            <img src="images/ht_change_diaper.jpeg" alt="Article picture" />
+          </div> <!-- /#col1 -->
+          
+          <!-- column right (2) -->
+          <div class="article_text">
+            <h3>Changing a diaper in a car</h3>
+            <p class="preview">You're in the car and the smell has become unbearable. What to do when beautiful baby needs that stinky diaper/nappy changed? Follow these steps and changing the baby in the car will be a breeze.</p>
+            <p class="author">WikiHow.com</p>
+            <p class="more"><a href="#">Tell me more</a></p>
+          </div> <!-- /#col2 -->
+        </div> <!-- /#row -->
+
+      </main>
+      
+      <footer>
+        <div id="footer">
+          <!-- copyright text and social icons -->
+          <span>
+            <strong>&copy; 2018 John Doe. All rights reserved</strong>
+          </span>
+          <span class="social">
+            <a href="https://www.facebook.com/">
+              <img src="images/ico_facebook.png" alt="Facebook" style="width: 40px; height: 40px" />
+            </a>
+          </span>
+          <span class="social">
+            <a href="https://www.twitter.com/">
+              <img src="images/ico_twitter.png" alt="Twitter" style="width: 40px; height: 40px" />
+            </a>
+          </span>
+          <span class="social">
+            <a href="https://plus.google.com/">
+              <img src="images/ico_googleplus.png" alt="Google+" style="width: 40px; height: 40px" />
+            </a>
+          </span>
+        </div> <!-- /#footer -->
+      </footer>
+      
+    </div> <!-- /#wrapper -->
+  
+  </body>
+</html>

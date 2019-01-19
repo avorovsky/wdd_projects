@@ -1,0 +1,225 @@
+<!doctype html>
+<!--
+**********************************************
+** Program:     Web Development             **
+** Course:      Capstone HTML5/CSS Project  **
+** Trainer:     Brent Scott                 **
+** Student:     Oleksandr Vorovskyi         **
+** Filename:    apps.html                   **
+** Description: Apps webpage                **
+**********************************************-->
+<html lang="en">
+  <head>
+    <title>Mobile Blog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#999999" />
+    
+    <!-- favorites and apps icons -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="57x57" href="images/logo57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/logo72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/logo114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/logo144.png" />
+    
+    <!-- embedding Google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700" />
+    
+    <!-- embedding stylesheets -->
+    <link rel="stylesheet" type="text/css" href="styles/desktop.css" media="screen and (min-width:768px)" />
+    <link rel="stylesheet" type="text/css" href="styles/mobile.css" media="screen and (max-width:767px)" />
+    <link rel="stylesheet" type="text/css" href="styles/print.css" media="print" />
+    
+    <!-- conditions for IE9 and earlier support -->
+    <!--[if LTE IE 9]>
+      <script type="text/javascript" src="scripts/lte_ie9.js"></script>
+      <link rel="stylesheet" type="text/css" href="styles/desktop.css" />
+      <style type="text/css">
+        header, nav, main, footer{
+          display: block;
+        }
+      </style>
+    <![endif]-->
+    
+    <!-- style for all IEs to avoid borders on img-links -->
+    <style>
+      a img{
+        border: none;
+        outline: none;
+      }
+    </style>
+    
+    <!-- catalogue style -->
+    <style>
+      #banner{
+        min-height: 50px;
+        width: 100%;
+      }
+      .row{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      @media screen and (max-width: 480px){
+        .cat_item{
+          width: 240px;
+        }
+      }      
+    
+    </style>
+    
+</head>
+
+  <body>
+    
+    <div id="wrapper">
+      
+      <header>
+        
+        <div id="logo">
+          <h1>Mob</h1>
+          <a href="index.html">
+            <img src="images/logo57.png" alt="Logo" style="width: 57px; height: 57px;" />
+          </a>
+          <h1>Blog</h1>
+          <a href="#menu">
+            <span id="sandwich"></span> <!-- sandwich button -->
+          </a>
+        </div>
+  
+        <nav>
+          <div id="navigation">
+            <!-- main navigation -->
+            <ul class="menu" id="menu">
+              <li><a title="home" href="index.html">Home</a>
+              </li><li class="urhere"><a title="Apps" href="apps.html">Apps</a>
+              </li><li><a title="Devices" href="devices.html">Devices</a>
+              </li><li><a title="How-to's" href="howtos.html">How-To's</a>
+              </li><li><a title="Contacts" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+      </header>
+      
+      <main>
+        
+        <!-- warning message for IE9 and earlier --> 
+        <!--[if LTE IE 9]>
+          <div class="row">
+            <div id="old_ie_warning">
+              <p>Your browser does not support some features of this site. Please, upgrade it!</p>
+            </div>
+          </div>
+        <![endif]-->
+        
+        <div class="row">
+          <!-- banner/"hero" --> 
+          <div id="banner">
+            <h2>Favorite apps</h2>
+          </div> <!-- /#banner -->
+
+        </div> <!-- /#row -->
+        
+        <div class="row">
+          
+          <!-- apps catalogue -->
+          <div class="cat_item">
+            <img src="images/app_chrome.png" alt="Crome" />
+            <p>Google Chrome</p>
+          </div> 
+          <div class="cat_item">
+            <img src="images/app_excel.png" alt="Excel" />
+            <p>Microsoft Excel</p>
+          </div>
+          <div class="cat_item">
+            <img src="images/app_firefox.png" alt="Firefox" />
+            <p>Firefox</p>
+          </div>
+          <div class="cat_item">
+            <img src="images/app_gdrive.png" alt="Google Drive" />
+            <p>Google Drive</p>
+          </div>
+          <div class="cat_item">
+            <img src="images/app_gmail.png" alt="GMail" />
+            <p>GMail</p>
+          </div>
+          <div class="cat_item">
+            <img src="images/app_gmaps.png" alt="Google Maps" />
+            <p>Google Maps</p>
+          </div>
+          <div class="cat_item">
+            <img src="images/app_ie.png" alt="Internet Explorer" />
+            <p>Internet Explorer</p>
+          </div>
+          <div class="cat_item">
+            <img src="images/app_infopath.png" alt="InfoPath" />
+            <p>Microsoft InfoPath</p>
+          </div>
+          <div class="cat_item">
+            <img src="images/app_msoffice.png" alt="Microsoft Office" />
+            <p>Microsoft Office</p>
+          </div>
+          <div class="cat_item">
+            <img src="images/app_onenote.png" alt="OneNote" />
+            <p>Microsoft OneNote</p>
+          </div>
+          <div class="cat_item">
+            <img src="images/app_outlook.png" alt="Outlook" />
+            <p>Microsoft Outlook</p>
+          </div>
+          <div class="cat_item">
+            <img src="images/app_powerpoint.png" alt="PowerPoint" />
+            <p>Microsoft PowerPoint</p>
+          </div>
+          <div class="cat_item">
+            <img src="images/app_project.png" alt="Project" />
+            <p>Microsoft Project</p>
+          </div>
+          <div class="cat_item">
+            <img src="images/app_visio.png" alt="Visio" />
+            <p>Microsoft Visio</p>
+          </div>
+          <div class="cat_item">
+            <img src="images/app_word.png" alt="Word" />
+            <p>Microsoft Word</p>
+          </div>
+          <div class="cat_item">
+            <img src="images/app_youtube.png" alt="YouTube" />
+            <p>YouTube</p>
+          </div>
+          
+        </div> <!-- /#row -->
+      </main>
+      
+      <footer>
+        <div id="footer">
+          <!-- copyright text and social icons -->
+          <span>
+            <strong>&copy; 2018 John Doe. All rights reserved</strong>
+          </span>
+          <span class="social">
+            <a href="https://www.facebook.com/">
+              <img src="images/ico_facebook.png" alt="Facebook" style="width: 40px; height: 40px" />
+            </a>
+          </span>
+          <span class="social">
+            <a href="https://www.twitter.com/">
+              <img src="images/ico_twitter.png" alt="Twitter" style="width: 40px; height: 40px" />
+            </a>
+          </span>
+          <span class="social">
+            <a href="https://plus.google.com/">
+              <img src="images/ico_googleplus.png" alt="Google+" style="width: 40px; height: 40px" />
+            </a>
+          </span>
+        </div> <!-- /#footer -->
+      </footer>
+      
+    </div> <!-- /#wrapper -->
+  
+  </body>
+</html>

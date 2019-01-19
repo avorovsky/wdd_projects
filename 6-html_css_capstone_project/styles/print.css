@@ -1,0 +1,202 @@
+/*********************************************
+** Program:     Web Development             **
+** Course:      Capstone HTML5/CSS Project  **
+** Trainer:     Brent Scott                 **
+** Student:     Oleksandr Vorovskyi         **
+** Filename:    print.css                   **
+** Description: Printing stylesheet         **
+*********************************************/
+
+/* General style */
+html{
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 18px;
+}
+#wrapper{
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Header */
+header h1, img{
+  display: inline-block;
+  float: left;
+}
+header h1{
+  padding: 0 5px 0 5px;
+  margin: 0;
+  font-size: 3rem;
+}
+header img{
+  padding: 4px 0 4px 0;
+}
+#logo{
+  padding-left: 5px;
+}
+#sandwich{
+  display: none;
+}
+
+/* Navigation */
+nav{
+  display: none;
+  font-size: 1.5rem;
+}
+
+/* Main content: general */
+.row{
+  width: 100%;
+}
+.column{
+  box-sizing: border-box;
+  float: left;
+  width: 33%;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  margin-left: 1px;
+}
+.author{
+  font-style: italic; 
+  font-size: 0.9rem
+}
+.author::before{
+  content: "-- by ";
+}
+main p, h2, h3{
+  margin: 0;
+  padding: 10px;
+}
+
+/* Main content: top banner */
+#old_ie_warning{
+  text-align: center;
+  background-color: #333333;
+  color: #000000;
+  font-size: 1.5rem;
+}
+#banner{
+  clear: both;
+}
+#banner h2{
+  text-transform: uppercase;
+  color: #000000;
+}
+#banner h2::after{
+  content: ":";
+}
+#banner p:not(.author){
+  padding-left: 30px;
+  color: #000000;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+#banner p.more{
+  display: none;
+}
+#banner p.more a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Main content: columns with tables */
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+table tr{
+  height: 75px;
+}
+table th{
+  color: #ffffff;
+  text-align: left;
+  font-size: 1.25rem;
+  padding: 10px;
+}
+table td{
+  padding: 10px;
+  border: 1px solid #ffffff;
+  font-size: 1.25rem;
+}
+.top_no{
+  color: #ffffff;
+  background-color: #000000;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  padding: 10px;
+}
+.new_no{
+  color: #ffffff;
+  background-color: #000000;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  padding: 10px;
+}
+.preview{
+  font-style: italic; 
+  font-size: 0.75rem;
+  quotes: "«" "»";
+}
+.preview::before{
+  content: open-quote;
+}
+.preview::after{
+  content: "..." close-quote;
+}
+.adv{
+  text-align: center;
+}
+td.adv img{
+  float: none;
+  max-width: 100%;
+}
+
+/* Main content: articles list */
+.article_text h3{
+  color: #000000;
+}
+.article_text p.more{
+  display: block;
+  width: 100px;
+  text-align: center;
+  background: #000000;
+  margin: 5px;
+  line-height: 0.9rem;
+  float: right;
+}
+.article_text p.more a{
+  text-decoration: none;
+  color: #ffffff;
+}
+.article_photo img{
+  max-height: 100px;
+}
+
+/* Main content: catalogue */
+.cat_item, .cat_item img{
+  width: 75px;
+}
+.cat_item{
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 5px 15px;
+}
+
+/* Main content: feedback form */
+#feedback{
+  display: none;
+}
+
+/* Footer */
+#footer{
+  clear: both;
+  height: 50px;
+  color: #333333;
+  font-size: 0.75rem;
+  line-height: 3rem;
+  padding: 0 10px;
+}
+#footer span.social{
+  display: none;
+}

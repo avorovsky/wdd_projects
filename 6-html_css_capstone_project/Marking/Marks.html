@@ -1,0 +1,466 @@
+<!doctype html>
+<!--
+**********************************************
+** Program:     Web Development             **
+** Course:      Capstone HTML5/CSS Project  **
+** Trainer:     Brent Scott                 **
+** Student:     Oleksandr Vorovskyi         **
+** Filename:    Marks.html                  **
+** Description: Requred criterias webpage   **
+**********************************************
+-->
+<html lang="en">
+  <head>
+    <title>Marks for HTML/CSS Capstone Project</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- embedding Google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" />
+    
+    <!-- conditions for IE9 and earlier support -->
+    <!--[if LTE IE 9]>
+      <script type="text/javascript" src="scripts/lte_ie9.js"></script>
+      <style type="text/css">
+        header, nav, main, footer{
+          display: block;
+        }
+      </style>
+    <![endif]-->
+    
+    <!-- catalogue style -->
+    <style>
+      html{
+        font-family: "Roboto Condensed", sans-serif;
+        font-size: 18px;
+        background: radial-gradient(#ffffff,#999999);
+        box-sizing: border-box;
+      }
+      #wrapper{
+        width: 100%;
+        max-width: 960px;
+        min-width: 385px;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+      header{
+        background: #333333;
+        opacity: 0.9;
+        border-radius: 5px;
+      }
+      header h1, img{
+        display: inline-block;
+      }
+      header h1{
+        padding: 0 5px 0 5px;
+        margin: 0;
+        font-size: 3rem;
+        text-shadow:
+          2px 2px rgba(255,255,255,0.5),
+          -2px 2px rgba(255,255,255,0.5),
+          -2px -2px rgba(255,255,255,0.5),
+          2px -2px rgba(255,255,255,0.5);
+      }
+      header img{
+        padding: 4px 0 4px 0;
+      }
+      #logo{
+        padding-left: 5px;
+      }
+      .row{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        word-wrap: break-word;
+      }
+      #banner{
+        display: block;
+        width: 100%;
+        background-color: rgba(255,255,255,0.75);
+        margin-top: 5px;
+        padding: 0 15px;
+        font-size: 1em;
+        border-radius: 5px;
+      }
+      #banner h2{
+        text-transform: uppercase;
+        color: #cc3333;
+        line-height: 1rem;
+      }
+      .cat_item{
+        width: 30%;
+      }
+      .cat_link{
+        width: 70%;
+        padding: inherit;
+      }
+      .cat_item p, .cat_link p{
+        display: block;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+      }
+      .cat_item p{
+        color: #ffffff;
+        background-color: rgba(103,103,103,0.9);
+      }
+      .cat_link p{
+        background-color: rgba(154,154,154,0.9);
+      }
+      .cat_link code{
+        display: block;
+        max-width: 97%;
+        margin-top: 10px;
+        font-family: "Roboto Mono", monospace;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        background-color: rgba(255,255,255,0.9);
+        white-space: pre-wrap;
+        padding: inherit;
+        border-radius: inherit;
+      }
+      .new_tab{
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-image: url("../images/new_tab_arrow.gif");
+        margin-left: 5px;
+      }
+      #preview{
+        display: block;
+        width: 100%;
+        min-height: 350px;
+        margin-top: 10px;
+        border-radius: inherit;
+      }
+      #footer{
+        clear: both;
+        height: 50px;
+        background: linear-gradient(#999999,#333333);
+        color: #000000;
+        font-size: 0.75rem;
+        line-height: 3rem;
+        padding: 0 10px;
+        border-radius: 5px;
+      }
+      .copyleft {
+        display:inline-block;
+        transform: rotate(180deg);
+      }
+      @media screen and (max-width: 600px){
+        .cat_item, .cat_link{
+          width: 100%;
+        }
+        .cat_link{
+          margin-bottom: 15px;
+        }
+      }      
+    </style>
+    
+</head>
+
+  <body>
+    
+    <div id="wrapper">
+      
+      <header>
+        
+        <div id="logo">
+          <h1>Marks</h1>
+        </div>
+  
+      </header>
+      
+      <main>
+        
+        <div class="row">
+          <div id="banner">
+            <h2>HTML/CSS Capstone Project</h2>
+          </div> <!-- /#banner -->
+        </div> <!-- /#row -->
+
+        <div class="row">
+          
+          <!-- marks table -->
+          <div class="cat_item">
+            <p>At least one <strong>class</strong> selector in an <strong>embedded</strong> style (used in that page)</p>
+          </div>
+          <div class="cat_link">
+            <p>
+              Example: <a target="_blank" href="../contact.html">contacts.html</a><span class="new_tab"></span><br />
+              Line(s) #: 127-135<br />
+              Description: classes to mark required and not required fields of form
+
+<!-- preformatted code -->
+<code>.required{
+  color: #ff0000;
+  margin: 0 10px 0 -10px;
+  font-size: 1.5rem;
+}
+.not_required{
+  opacity: 0;
+  font-size: 1.5rem;
+}</code>
+<!-- end of preformatted code -->
+              
+            </p>
+          </div>
+          
+          <div class="cat_item">
+            <p>At least one valid <strong>inline</strong> style (only required on one page)</p>
+          </div> 
+          <div class="cat_link">
+            <p>
+              Example: <a target="_blank" href="../index.html">index.html</a><span class="new_tab"></span><br />
+              Line(s) #: 295<br />
+              Description: inline style to define size of social network icon
+
+<!-- preformatted code -->
+<code>&lt;img src="images/ico_facebook.png" alt="Facebook" style="width: 40px; height: 40px" /&gt;</code>
+<!-- end of preformatted code -->
+              
+            </p>
+          </div>
+
+          <div class="cat_item">
+            <p>Valid external CSS file(s) (must use minimum 10 rules)<br /><em>(Note: Only the "desktop" CSS file will be checked for validity)</em></p>
+          </div> 
+          <div class="cat_link">
+            <p>
+              Example: <a target="_blank" href="../styles/desktop.css">desktop.css</a><span class="new_tab"></span><br />
+              Line(s) #: 10-311<br />
+              Description: external CSS file for desktop style of pages<br />
+              Rules total: 54
+            </p>
+          </div>
+
+          <div class="cat_item">
+            <p>Functioning form (minimum 5 fields and 3 different types; must echo results back properly)</p>
+          </div> 
+          <div class="cat_link">
+            <p>
+              Example: <a target="_blank" href="../contact.html">contacts.html</a><span class="new_tab"></span><br />
+              Line(s) #: 221-283<br />
+              Description: feedback/contact form
+
+<!-- preformatted code -->
+<code>&lt;form method="post"
+      action="http://www.scott-media.com/test/form_display.php"
+      id="feedback_form"
+      name="feedback_form"
+      autocomplete="on"&gt;
+
+  &lt;fieldset&gt;
+    &lt;legend&gt;Contact us&lt;/legend&gt;
+    &lt;p&gt;
+      &lt;label for="preffered_name"&gt;Your name&lt;/label&gt;
+      &lt;span class="required"&gt;*&lt;/span&gt;
+      &lt;input type="text"
+             id="preffered_name"
+             name="preffered_name"
+             required="required" 
+             placeholder="Preferred name" /&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label for="subject"&gt;Subject&lt;/label&gt;
+      &lt;span class="not_required"&gt;*&lt;/span&gt;
+      &lt;select name="subject" id="subject"&gt;
+        &lt;option value="site_feedback" selected&gt;Site feedback&lt;/option&gt;
+        &lt;option value="news_suscribe"&gt;News subscription&lt;/option&gt;
+        &lt;option value="article_submit"&gt;Article submission&lt;/option&gt;
+        &lt;option value="info_request"&gt;Request for information&lt;/option&gt;
+        &lt;option value="other_reason"&gt;Other reason&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label for="email_address"&gt;Your email&lt;/label&gt;
+      &lt;span class="required"&gt;*&lt;/span&gt;
+      &lt;input type="email"
+             id="email_address"
+             name="email_address"
+             required="required" 
+             placeholder="Actual email" /&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;label class="addinfo" for="comments"&gt;&lt;span&gt;Your message&lt;/span&gt;&lt;/label&gt;&lt;br /&gt;
+      &lt;textarea name="comments"
+                id="comments"
+                placeholder="Let us know your comments"&gt;&lt;/textarea&gt;
+    &lt;/p&gt;
+
+    &lt;fieldset&gt;
+      &lt;legend&gt;Attachment&lt;/legend&gt;
+      &lt;input type="file"
+             id="file_to_submit"
+             name="file_to_submit" /&gt;
+    &lt;/fieldset&gt;
+
+  &lt;/fieldset&gt;
+
+  &lt;div id="buttons"&gt;
+    &lt;input id="button_clear"
+           type="reset" 
+           value="Clear form" /&gt; 
+    &lt;input id="button_send"
+           type="submit" 
+           value="Send message" /&gt;
+  &lt;/div&gt;&lt;!-- buttons --&gt;
+
+&lt;/form&gt;</code>
+<!-- end of preformatted code -->
+              
+          </div>
+
+          <div class="cat_item">
+            <p>Minimum 1 table with border, cell spacing, cell padding, and width. These must be set in the CSS, if you want to validate in HTML5</p>
+          </div> 
+          <div class="cat_link">
+            <p>
+              Example: <a target="_blank" href="../index.html">index.html</a><span class="new_tab"></span><br />
+              Line(s) #: 156-212<br />
+              Description: columns for top/recent list of articles styled as tables
+
+<!-- preformatted code -->
+<code>&lt;table&gt;
+
+  &lt;tr&gt;
+    &lt;th colspan="2"&gt;Top readings&lt;/th&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;span class="top_no"&gt;#1&lt;/span&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;span&gt;DIY: Phone's battery replacement&lt;/span&gt;&lt;br /&gt;
+      &lt;span class="author"&gt;Brent Scott&lt;/span&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;span class="top_no"&gt;#2&lt;/span&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;span&gt;Top design with Adobe Photoshop&lt;/span&gt;&lt;br /&gt;
+      &lt;span class="author"&gt;Emad Endrawes&lt;/span&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;span class="top_no"&gt;#3&lt;/span&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;span&gt;Mobile OCR: how it works?&lt;/span&gt;&lt;br /&gt;
+      &lt;span class="author"&gt;Oleksandr Vorovskyi&lt;/span&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;span class="top_no"&gt;#4&lt;/span&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;span&gt;Android vs iOS: The Oscar goes to...!&lt;/span&gt;&lt;br /&gt;
+      &lt;span class="author"&gt;Larry Page&lt;/span&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;span class="top_no"&gt;#5&lt;/span&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;span&gt;Who let the dogs out?&lt;/span&gt;&lt;br /&gt;
+      &lt;span class="author"&gt;Baha Men&lt;/span&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;</code>
+<!-- end of preformatted code -->
+              
+              Example: <a target="_blank" href="../styles/desktop.css">desktop.css</a><span class="new_tab"></span><br />
+              Line(s) #: 170-175<br />
+              Description: set width, spacing, border style, and padding of table
+
+<!-- preformatted code -->
+<code>table{
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  padding: 10px;
+}</code>
+<!-- end of preformatted code -->
+              
+            </p>
+          </div>
+
+          <div class="cat_item">
+            <p>At least one custom image with width, alt, and height attributes set</p>
+          </div> 
+          <div class="cat_link">
+            <p>
+              Example: <a target="_blank" href="../apps.html">apps.html</a><span class="new_tab"></span><br />
+              Line(s) #: 84<br />
+              Description: logo in header with size and alt-text set
+
+<!-- preformatted code -->
+<code>&lt;img src="images/logo57.png" alt="Logo" style="width: 57px; height: 57px;" /&gt;</code>
+<!-- end of preformatted code -->
+              
+            </p>
+          </div>
+
+          <div class="cat_item">
+            <p>List (at least one type of list in one of the pages)</p>
+          </div> 
+          <div class="cat_link">
+            <p>
+              Example: <a target="_blank" href="../howtos.html">howtos.html</a><span class="new_tab"></span><br />
+              Line(s) #: 88-95<br />
+              Description: navigation menu is an unordered list
+
+<!-- preformatted code -->
+<code>&lt;ul class="menu" id="menu"&gt;
+  &lt;li&gt;&lt;a title="Home" href="index.html"&gt;Home&lt;/a&gt;
+  &lt;/li&gt;&lt;li&gt;&lt;a title="Apps" href="apps.html"&gt;Apps&lt;/a&gt;
+  &lt;/li&gt;&lt;li&gt;&lt;a title="Devices" href="devices.html"&gt;Devices&lt;/a&gt;
+  &lt;/li&gt;&lt;li class="urhere"&gt;&lt;a title="How-to's" href="howtos.html"&gt;How-To's&lt;/a&gt;
+  &lt;/li&gt;&lt;li&gt;&lt;a title="Contacts" href="contact.html"&gt;Contact&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code>
+<!-- end of preformatted code -->
+              
+            </p>
+          </div>
+
+          <div class="cat_item">
+            <p>Site on Salsa server and available to the world (permissions set, etc) [second server optional] The URL of your home page should be <strong>http://salsa.uwdce.ca/~username/HTML_CSS/project/index.html</strong></p>
+          </div> 
+          <div class="cat_link">
+            <p>
+              Site URL: <a target="_blank" href="http://salsa.uwdce.ca/~o.vorovskyi/HTML_CSS/project/index.html">http://salsa.uwdce.ca/~o.vorovskyi/HTML_CSS/project/index.html</a><span class="new_tab"></span><br />
+              Description: URL above is shown in preview frame below
+              <iframe id="preview" src="http://salsa.uwdce.ca/~o.vorovskyi/HTML_CSS/project/index.html"></iframe>
+            </p>
+          </div>
+          
+        </div> <!-- /#row -->
+      </main>
+      
+      <footer>
+        <div id="footer">
+          <!-- copyleft  -->
+          Oleksandr Vorovskyi <span class="copyleft">&copy;</span> 2018
+        </div> <!-- /#footer -->
+      </footer>
+      
+    </div> <!-- /#wrapper -->
+  
+  </body>
+</html>
